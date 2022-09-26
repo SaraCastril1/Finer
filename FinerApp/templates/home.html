@@ -4,7 +4,39 @@
 
 {% block contenido %}
 
-<h1>HOME</h1>
+<div class = "row">
+   
+   <div class = "col-sm-12 col-md-6 col-lg-8 col-xl-8 ">
+      <h3><strong>EMPRESAS REGISTRADAS</strong></h3>
+      <div class = "table-responsive py-2 ">
+         <table class = "table table-striped" >
+            <thead>
+               <th>Código</th>
+               <th>Nombre</th>
+               <th></th>
+            </thead>
+            <tbody>
+
+                  {% for e in empresas  %}
+                  <tr>
+                  <td>{{e.empresa_id}}</td>
+                  <td>{{e.nombre}}</td>
+                  <td><a href = "productos/gestion/" class= "btn btn-info">Productos</a></td>
+                  </tr>
+                  {% endfor%}
+
+            </tbody>
+         </table>
+      </div>
+   </div>
+   
+
+
+</div>
+
+
+
+   
 
 {% endblock %}
 
